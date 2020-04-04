@@ -1,0 +1,13 @@
+overwrite: true
+schema: "./pages/api/src/generated/schema.graphql"
+documents:
+  - "./pages/**/*.{ts,tsx}"
+  - "./components/**/*.{ts,tsx}"
+generates:
+  generated/index.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+    config:
+      withHooks: true
